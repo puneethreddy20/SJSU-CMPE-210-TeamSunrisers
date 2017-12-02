@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<topology xmlns="http://www.cisco.com/VIRL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="0.95" xsi:schemaLocation="http://www.cisco.com/VIRL https://raw.github.com/CiscoVIRL/schema/v0.95/virl.xsd">
+    <extensions>
+        <entry key="management_network" type="String">flat</entry>
+        <entry key="AutoNetkit.enable_cdp" type="Boolean">false</entry>
+        <entry key="AutoNetkit.enable_OnePK" type="Boolean">false</entry>
+        <entry key="AutoNetkit.infrastructure_only" type="Boolean">false</entry>
+        <entry key="AutoNetkit.address_family" type="String">v4</entry>
+        <entry key="AutoNetkit.ipv4_infra_subnet" type="String">10.0.0.0</entry>
+        <entry key="AutoNetkit.ipv4_infra_prefix" type="String">8</entry>
+        <entry key="AutoNetkit.ipv4_loopback_subnet" type="String">192.168.0.0</entry>
+        <entry key="AutoNetkit.ipv4_loopback_prefix" type="String">22</entry>
+        <entry key="AutoNetkit.ipv4_vrf_loopback_subnet" type="String">172.16.0.0</entry>
+        <entry key="AutoNetkit.ipv4_vrf_loopback_prefix" type="String">24</entry>
+        <entry key="AutoNetkit.enable_routing" type="Boolean">true</entry>
+        <entry key="AutoNetkit.IGP" type="String">ospf</entry>
+        <entry key="AutoNetkit.enable_mpls_oam" type="Boolean">false</entry>
+    </extensions>
+    <node name="iosv-1" type="SIMPLE" subtype="IOSv" location="186,150">
+        <extensions>
+            <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+            <entry key="AutoNetkit.IGP" type="String">ospf</entry>
+            <entry key="AutoNetkit.ospf_area" type="String">0</entry>
+            <entry key="AutoNetkit.ibgp_role" type="String">Peer</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet0/1"/>
+        <interface id="1" name="GigabitEthernet0/2"/>
+    </node>
+    <node name="iosv-2" type="SIMPLE" subtype="IOSv" location="448,134">
+        <extensions>
+            <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+            <entry key="AutoNetkit.IGP" type="String">ospf</entry>
+            <entry key="AutoNetkit.ospf_area" type="String">0</entry>
+            <entry key="AutoNetkit.ibgp_role" type="String">Peer</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet0/1"/>
+        <interface id="1" name="GigabitEthernet0/2"/>
+    </node>
+    <node name="iosv-3" type="SIMPLE" subtype="IOSv" location="743,131">
+        <extensions>
+            <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+            <entry key="AutoNetkit.IGP" type="String">ospf</entry>
+            <entry key="AutoNetkit.ospf_area" type="String">0</entry>
+            <entry key="AutoNetkit.ibgp_role" type="String">Peer</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet0/1"/>
+        <interface id="1" name="GigabitEthernet0/2"/>
+    </node>
+    <node name="iosv-4" type="SIMPLE" subtype="IOSv" location="722,262">
+        <extensions>
+            <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+            <entry key="AutoNetkit.IGP" type="String">ospf</entry>
+            <entry key="AutoNetkit.ospf_area" type="String">0</entry>
+            <entry key="AutoNetkit.ibgp_role" type="String">Peer</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet0/1"/>
+        <interface id="1" name="GigabitEthernet0/2"/>
+    </node>
+    <node name="iosv-5" type="SIMPLE" subtype="IOSv" location="498,271">
+        <extensions>
+            <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+            <entry key="AutoNetkit.IGP" type="String">ospf</entry>
+            <entry key="AutoNetkit.ospf_area" type="String">0</entry>
+            <entry key="AutoNetkit.ibgp_role" type="String">Peer</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet0/1"/>
+        <interface id="1" name="GigabitEthernet0/2"/>
+    </node>
+    <node name="iosv-6" type="SIMPLE" subtype="IOSv" location="179,253">
+        <extensions>
+            <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+            <entry key="AutoNetkit.IGP" type="String">ospf</entry>
+            <entry key="AutoNetkit.ospf_area" type="String">0</entry>
+            <entry key="AutoNetkit.ibgp_role" type="String">Peer</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet0/1"/>
+        <interface id="1" name="GigabitEthernet0/2"/>
+    </node>
+    <annotations/>
+    <connection dst="/virl:topology/virl:node[2]/virl:interface[1]" src="/virl:topology/virl:node[1]/virl:interface[1]"/>
+    <connection dst="/virl:topology/virl:node[3]/virl:interface[1]" src="/virl:topology/virl:node[2]/virl:interface[2]"/>
+    <connection dst="/virl:topology/virl:node[4]/virl:interface[1]" src="/virl:topology/virl:node[3]/virl:interface[2]"/>
+    <connection dst="/virl:topology/virl:node[5]/virl:interface[1]" src="/virl:topology/virl:node[4]/virl:interface[2]"/>
+    <connection dst="/virl:topology/virl:node[6]/virl:interface[1]" src="/virl:topology/virl:node[5]/virl:interface[2]"/>
+    <connection dst="/virl:topology/virl:node[1]/virl:interface[2]" src="/virl:topology/virl:node[6]/virl:interface[2]"/>
+</topology>
